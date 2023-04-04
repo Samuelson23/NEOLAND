@@ -34,4 +34,3 @@ let i = c*m
 console.log(i);
 
 
-
