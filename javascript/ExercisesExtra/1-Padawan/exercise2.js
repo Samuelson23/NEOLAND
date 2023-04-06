@@ -11,10 +11,13 @@ const foodSchedule = [
   { name: "Rice", isVegan: true },
   { name: "Pasta", isVegan: true },
 ];
-for(let i=0;i<fruits.length;i++){
-    foodSchedule.forEach(comida=>{
-        if(comida.isVegan==false) comida.name=fruits[i]
-    })
+
+for(let i=0;i<foodSchedule.length;i++){
+  if(foodSchedule[i].isVegan==false){
+    foodSchedule[i].name=fruits[0]
+    foodSchedule[i].isVegan=true
+    fruits.shift()
+  }
 }
 
 console.log(foodSchedule)
