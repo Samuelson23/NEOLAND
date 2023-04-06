@@ -1,9 +1,3 @@
-/*
-1.5 Elimina el último elemento del array y muestra el primero y el último por consola.
-const rickAndMortyCharacters = ["Rick", "Beth", "Jerry", "Morty", "Summer", "Lapiz Lopez"];
-1.6 Elimina el segundo elemento del array y muestra el array por consola.
-const rickAndMortyCharacters = ["Rick", "Beth", "Jerry", "Morty", "Summer", "Lapiz Lopez"];*/
-
 /*1.1 Consigue el valor "HULK" del array de avengers y muestralo por consola.*/
 const avengers = ["HULK", "SPIDERMAN", "BLACK PANTHER"];
 console.log("1.1", avengers[0]);
