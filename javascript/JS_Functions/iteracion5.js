@@ -7,7 +7,6 @@ y de lo contrario cuente la longitud del string y lo sume. Puedes usar este arra
 const mixedElements = [6, 1, 'Rayo', 1, 'vallecano', '10', 'upgrade', 8, 'hub'];
 function averageWord(param) {
     let sumatorio=0
-    let longitud=0
 
     param.forEach(num=>{
         (typeof num === "number") ? sumatorio+=num : sumatorio+=num.length
