@@ -14,4 +14,4 @@ const products = [
     sumatorio+=element.sellCount
   })
 
-  console.log(sumatorio)
+  console.log("El total de las ventas es: " + sumatorio)
