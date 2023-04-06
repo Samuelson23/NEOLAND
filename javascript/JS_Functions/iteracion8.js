@@ -4,6 +4,7 @@
 Crea una función que nos devuelva el número de veces que 
 se repite cada una de las palabras que lo conforma.  Puedes usar este array para probar tu función:
 */
+
 const counterWords = [
     'code',
     'repeat',
@@ -37,7 +38,7 @@ function repeatCounter(param){
 repeatCounter(counterWords)
 
 
-//PRUEBAS QUE HE HECHO HASTA CONSEGUIR IMPRIMIR POR CONSOLA SIN REPETIR LAS PALABRAS
+//PRUEBAS QUE HE HECHO HASTA CONSEGUIR IMPRIMIR POR CONSOLA SIN REPETIR LAS PALABRAS..
 
 /*function repeatCounter(param) {
   notDuplicated=[];
