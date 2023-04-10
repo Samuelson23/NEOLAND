@@ -10,8 +10,13 @@ const toys = [
     {id: 40, name: 'El gato felix'}
     ]
 
+let x
+
 for(element of toys){
-    if(element.name.includes("gato")) delete element.name && delete element.id
+    element.name.includes("gato") && (delete element.id && delete element.name)
 }
+
+/* let x=toys.indexOf("")
+toys.splice(x,1) */
 
 console.log(toys)
