@@ -10,8 +10,9 @@ Usa un bucle **for** para recorrer todos los destinos del array y elimina los el
  {id: 44, name: 'Filipinas'}, 
  {id: 59, name: 'Madagascar'}]
 
-placesToTravel.forEach(element=>{
-   (element.id=='11' || element.id=='40') && (delete element.id && delete element.name)
+placesToTravel.forEach((element,index)=>{
+   (element.id=='11' || element.id=='40') && (placesToTravel.splice(index,1))
 })
 
 console.log(placesToTravel)
+
