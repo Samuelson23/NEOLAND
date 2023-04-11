@@ -31,7 +31,6 @@ const movies = [
   categorias=[];
 
   for(pelicula of movies){
-    
     pelicula["categories"].forEach(cat=>{
       (!categorias.includes(cat)) && categorias.push(cat)
     })
