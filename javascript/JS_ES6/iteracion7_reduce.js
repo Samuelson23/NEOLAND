@@ -16,7 +16,7 @@ const exams = [
 
 const totalNotas = exams.reduce((acc,nom)=> acc+=nom.score, 0)
 
-console.log(totalNotas)
+console.log(`La suma de las notas de todos los alumnos es de: ${totalNotas}`)
 
 /* 7.2 Dado el mismo array, haz una suma de todos las notas de los examenes de los 
 alumnos que esten aprobados usando la función .reduce().*/
@@ -25,13 +25,13 @@ const sumaAprobados = exams.reduce((acc,nom)=>{
     if(nom.score>=5) acc+=nom.score
     return acc    
 },0)
-console.log(sumaAprobados) 
+console.log(`La suma de los alumnos aprobados es de: ${sumaAprobados}`) 
 
 
 /*7.3 Dado el mismo array, haz la media de las notas de todos los examenes .reduce().*/
 
 const mediaNotas = exams.reduce((acc,nom,index)=>{
     acc+=nom.score
-    return acc/index
+    return acc
 },0)
-console.log(mediaNotas)
+console.log(`La media de las notas es de: ${mediaNotas/exams.length}`)
