@@ -19,9 +19,11 @@ const nameFinder = [
     'Marc'
   ];
   function finderName(param,nombre) {
+    let acc=0;                                              //creo un contador para almacenar el nº de veces que no encuentra la palabra
     for(i=0;i<param.length;i++){
-        if(param[i]===nombre) console.log(i)
+        (param[i]===nombre) ? console.log("True",i) : acc++
     }
-  }
+    if(acc++==param.length) console.log("False")            //si el contador coincide con el largo del array es que no ha encontrado
+  }                                                         //ninguna coincidencia
 
-  finderName(nameFinder,"Clint")
+  finderName(nameFinder,"Tony")
