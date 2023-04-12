@@ -60,9 +60,8 @@ console.log(noRepetidas)  */
 
 for(let i=0;i<noRepetidas.length;i++){
     let sumatorio=0;
-    console.log(`La palabra --${noRepetidas[i]}-- se repite:`)
     for(let x=0;x<arrayCanciones.length;x++){
         (noRepetidas[i]==arrayCanciones[x]) && sumatorio++
     }
-    console.log(`${sumatorio} veces`)
+    console.log(`La palabra --${noRepetidas[i]}-- se repite: ${sumatorio} veces`)
 }
