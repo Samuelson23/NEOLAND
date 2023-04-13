@@ -13,8 +13,8 @@ const animals = [
     let tildes=["á","é","í","ó","ú","à","è","ì","ò","ù"]
  
     array.forEach(palabra=>{
-        let palabraContar=[]
-       palabraContar.push(palabra.toLowerCase())
+       //let palabraContar=[]
+       //palabraContar.push(palabra.toLowerCase())
        //console.log(palabraContar)
        //console.log(palabra)
        for(let i=0;i<palabra.length;i++){
