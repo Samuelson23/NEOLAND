@@ -9,7 +9,7 @@ let auxiliar = 0;
 // teniendo una de auxiliar para guardar el menor.
 // Pero aun asi me ha tocado buscar ayuda en internet pq me he metido en varios bucles infinitos y ni forma de salir de ahi xD
 
-const ordenadorArrays = (array) => {
+/* const ordenadorArrays = (array) => {
   for (i = 0; i < array.length - 1; i++) {
     for (x = 1; x < array.length; x++) {
       if (array[x] < array[x - 1]) {
@@ -21,5 +21,25 @@ const ordenadorArrays = (array) => {
   }
   return array;
 }
-
+ 
 console.log(ordenadorArrays(arrayNumeros));
+*/
+
+// usando forEach
+
+const orderArrays = (array) => {
+  array.forEach((elem,i) => {
+    array.forEach((element,index)=>{
+      
+      if(array[index]<array[index-1]){
+        auxiliar=array[index]
+        array[index]=array[index-1]
+        array[index-1]=auxiliar
+      }
+    })
+  })
+  return array
+}
+
+//orderArrays(arrayNumeros)
+console.log(orderArrays(arrayNumeros))
