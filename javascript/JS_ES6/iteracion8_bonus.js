@@ -15,6 +15,6 @@ const videogames = [
 const genero = videogames.filter((gen)=>gen.genders.includes("RPG"))
 console.log(genero)
 
-const medias = genero.reduce((acc,num)=>(acc+=num.score),0)
-console.log(`La media de puntuación de los juegos RPG es de: ${medias/genero.length}`)
+const medias = genero.reduce((acc,num)=>(acc+=(num.score/genero.length)),0)
+console.log(`La media de puntuación de los juegos RPG es de: ${medias}`)
 
