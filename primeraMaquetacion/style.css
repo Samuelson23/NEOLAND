@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+h2{
+    text-align: center;
+    padding:20px;
+}
+
+body{
+
+    background-image: url("https://images.hdqwalls.com/download/valorant-game-logo-4k-wi-2048x2048.jpg");
+    background-size: 100% 100%
+}
+
+header {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  header > ul {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    /* ALINEAR A LA DERECHA */
+  }
+
+  a{
+    text-decoration: none;
+    color:inherit;
+    transition: color 0.5 ease-in-out;
+  }
+
+main{
+    min-width:80vh;
+    margin-left: 5rem;;
+    margin-right: 5rem;
+}
+
+article{
+    padding:0 20px;
+}
+
+.agente{
+    width:250px;
+    height: 350px;
+    align-items: center;
+    text-align:center;
+    background-color: #5a0202;
+}
+
+.intro {
+    font-size:24px;
+    color:#f2d0cf; 
+    background-color:#5a0202; 
+    text-align: center;
+
+}
+.nombre{
+    background-color:#fd0000;
+    text-align:center;
+    width: 200px;
+    align-self:center;
+    border-radius: 25px;
+}
+.gallery{
+    animation: fadeIn 0.5s;
+    padding-left: 8rem;
+    text-align: center;
+}
+.gallery > ul{
+    display:flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    gap:20px;
+    align-items:center;
+}
+.gallery img{
+    width:200px;
+    height:300px;   
+    
+    padding: 5px;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+    align-items: center;
+}
+.gallery div:hover{
+    background-color: beige;
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+}
+footer{
+    align-items: center;
+    text-align:center;
+    padding:20px;
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+    
+}
