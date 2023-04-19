@@ -1,0 +1,40 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    margin:auto;
+}
+
+.div{
+    height:40px;
+    width: 150px;
+    margin:10px;
+    padding:10px;
+    background-color: #e74c3c;
+    display:inline;
+}
+.parrafo{
+    height:40px;
+    width: 150px;
+    margin:10px;
+    padding:10px;
+    background-color: #9b59b6;
+    display:inline;
+    
+}
+.span{
+    height:40px;
+    width: 150px;
+    margin:10px;
+    padding:10px;
+    background-color: #3498db;
+}
+.enlace{
+    height:40px;
+    width: 150px;
+    margin:10px;
+    padding:10px;
+    background-color:#2ecc71;
+}
