@@ -114,7 +114,9 @@ main h1{
     margin-top: 5%;
     height: 3rem;
     width: 5rem;
-    background-color: #ffffffe7;
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF
 
 }
 .footer{
