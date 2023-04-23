@@ -48,10 +48,8 @@ ul{
     gap:2rem;
 }
 
-.material-symbols-outlined{
-    background-color: #131313;
-    color:#FFFFFF;
-    border-color: #131313;
+.burger{
+    display:none;
 }
 
 /* MAIN */
@@ -161,3 +159,17 @@ ul input{
     height: 40px;
     background-color: white;
 } */
+
+@media screen and (max-width:900px){
+    .burger{
+        display:inline;
+    }
+    header ul{
+        display:none;
+    }
+    header{
+        display:flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+}
