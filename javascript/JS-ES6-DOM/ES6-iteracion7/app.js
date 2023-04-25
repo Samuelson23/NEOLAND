@@ -9,3 +9,17 @@ const streamers7 = [
   { name: "Reven", age: 43, gameMorePlayed: "League of Legends" },
   { name: "AuronPlay", age: 33, gameMorePlayed: "Among Us" },
 ];
+
+const input = document.querySelector("[data-function='toFilterStreamers']"); //recogemos el input de html
+const boton = document.querySelector("[data-function='toShowFilterStreamers']");
+let letra = "";
+
+boton.addEventListener("click", (event) => {
+  console.clear();
+  const filtrar = streamers7.filter((elem) => {
+    nameStr = elem.name.toLowerCase();
+    letra = input.value;
+
+    nameStr.includes(letra.toLowerCase()) && console.log(elem.name);
+  });
+});
