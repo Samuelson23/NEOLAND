@@ -13,8 +13,8 @@ const streamers = [
 const input = document.querySelector("[data-function='toFilterStreamers']"); //recogemos el input de html
 let letra = "";
 //creamos un eventListener  para ver que se está introduciendo en el input
-input.addEventListener("click", (event) => {
-  //cada vez que hagamos click limpiamos la consola y mostramos el resultado
+input.addEventListener("input", (event) => {
+  //cada vez que introduzca algo limpiamos la consola y mostramos el resultado
   console.clear();
   //filtramos el array de streamers buscando la coincidencia
   const filtrar = streamers.filter((elem) => {
