@@ -64,8 +64,9 @@ const despuesDiv = document.querySelector("div");
 const parrafo2 = document.createElement("p");
 parrafo2.innerText = "Voy en medio!";
 
-const nodoPadre = despuesDiv.parentNode;
-nodoPadre.insertBefore(parrafo2, despuesDiv);
+despuesDiv.insertAdjacentElement("afterend", parrafo2);
+/* const nodoPadre = despuesDiv.parentNode;
+nodoPadre.insertAdjacentHTML(parrafo2, despuesDiv); */
 
 //2.9 Inserta p con el texto 'Voy dentro!', dentro de todos los div con la clase .fn-insert-here
 
