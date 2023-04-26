@@ -1,0 +1,141 @@
+:root{
+  --bgcolor:#272B33;
+  --pmcolor: whitesmoke;
+
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: var(--bgcolor);
+}
+header{
+  background-image: url("assets/logoheader.png");
+  background-color: #1e2229;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 20vh;
+  width: auto;
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+header div {
+  height: 100%;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  color:var(--pmcolor);
+  gap: 2rem;
+  padding:10px 40px;
+}
+
+header div img{
+  height: 100%;
+}
+
+main{
+  min-height: 70vh;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+main ul{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+main ul li{
+  height: 300px;
+  width: 300px;
+  list-style-type: none;
+  text-align: center;
+  padding:10px;
+  color:var(--pmcolor)
+}
+
+li figure h3{
+
+  border-bottom: 1px solid var(--pmcolor);
+  margin-bottom: 10px;
+}
+li p{
+  font-size: 0.8rem;
+}
+li img{
+  height: 200px;
+  width: 150px;
+  border-radius: 30%;
+  object-fit: cover;
+  padding:15px;
+}
+
+footer{
+  background-color: #1e2229;
+  height: 10vh;
+  width: auto;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  color:var(--pmcolor);
+  
+}
+
+footer div{
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+footer div a{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding:0 10px;
+}
+footer div a img {
+  height: 70%;
+}
+
+@media screen and (width<850px){
+  header{
+    background-image: none;
+    justify-content: space-between;
+  }
+  header div {
+   
+    padding:0;
+  }
+}
+@media screen and (width<640px){
+  header div img{
+    width:100%;
+    
+  }
+}
+
+@media screen and (width<450px){
+  header{
+    display:inline;
+  }
+  header div{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    background-color: black;
+  }
+
+
+}
