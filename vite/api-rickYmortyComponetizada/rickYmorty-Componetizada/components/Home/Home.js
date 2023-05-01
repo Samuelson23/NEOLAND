@@ -8,18 +8,28 @@ const template = () => {
 
 let numPag = 1;
 
+const input = document.createElement("input");
+const inpBt = document.createElement("button");
+inpBt.innerText = "Search";
 const btNext = document.createElement("button");
 const btPrev = document.createElement("button");
 const divBt = document.createElement("div");
 const divChar = document.createElement("div");
 const btPage = document.createElement("button");
+const divBuscar = document.createElement("div");
+const divPages = document.createElement("div");
 btPage.classList.add("btNumPag");
 btNext.innerText = "Next";
 btPrev.innerText = "Previous";
 btPage.innerText = numPag;
-divBt.appendChild(btPrev);
-divBt.appendChild(btPage);
-divBt.appendChild(btNext);
+divBuscar.appendChild(input);
+divBuscar.appendChild(inpBt);
+divBt.appendChild(divBuscar);
+divPages.appendChild(btPrev);
+divPages.appendChild(btPage);
+divPages.appendChild(btNext);
+divBt.appendChild(divPages);
+divBt.classList.add("divBuscador");
 numPag == 1 ? (btPrev.disabled = true) : (btPrev.disabled = false);
 
 const getData = async (page) => {
@@ -72,6 +82,50 @@ btPrev.addEventListener("click", (ev) => {
   numPag--;
   numPag == 1 ? (btPrev.disabled = true) : (btPrev.disabled = false);
   getData(numPag);
+});
+
+inpBt.addEventListener("click", (ev) => {
+  divChar.innerHTML = "";
+  const data = fetch("https://rickandmortyapi.com/api/character?")
+    .then((res) => res.json())
+    .then((res) => {
+      for (let i = 0; i < res.info.pages; i++) {
+        const dataPj = fetch(
+          `https://rickandmortyapi.com/api/character?page=${i}`
+        )
+          .then((datos) => datos.json())
+          .then((datos) => {
+            const main = document.querySelector("main");
+            datos.results.forEach((elem) => {
+              const section = document.createElement("section");
+              if (elem.name.includes(input.value)) {
+                section.innerHTML = `
+                  <h3>${elem.name}</h3>
+                  <img src ="${elem.image}" alt= "imagen del personaje  ${elem.name}" />
+                  <div class="personaje">
+                      <p>GENERO: ${elem.gender}</p>
+                      <p>ESPECIE: ${elem.species}</p>
+                      <p>LOCALIZACION: ${elem.location.name}</p>
+                      <p>STATUS: ${elem.status}</p>
+                  </div>`;
+                divChar.appendChild(section);
+
+                main.appendChild(divChar);
+                switch (elem.status) {
+                  case "Alive":
+                    section.classList.add("alive");
+                    break;
+                  case "Dead":
+                    section.classList.add("dead");
+                    break;
+                  case "unknown":
+                    section.classList.add("unk");
+                }
+              }
+            });
+          });
+      }
+    });
 });
 
 export const printTemplate = () => {
