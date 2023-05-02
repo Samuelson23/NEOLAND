@@ -1,0 +1,55 @@
+header{
+    background-color: #08224c;
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:#89d2df
+}
+header h1{
+    text-align: center;
+    letter-spacing: 1rem;
+    font-size: 3rem;
+    width:50vw;
+}
+header ul{
+    display:flex;
+    gap:30px;
+    margin-right: 5%;
+    align-items: center;
+}
+header ul li{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.iconLogout{
+    display:none;
+}
+.imgLogo{
+    height: 10vh;
+    width: 10vw;
+
+    padding:10px;
+}
+
+header img{
+    filter:invert(100%);
+}
+
+@media screen and (width<1050px){
+    header h1{
+        display:none;
+    }
+    header{
+        justify-content: center;
+    }
+}
+
+@media screen and (width<650px){
+    .imgLogo{
+        display:none;
+    }
+}
