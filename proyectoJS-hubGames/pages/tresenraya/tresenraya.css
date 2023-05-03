@@ -1,0 +1,33 @@
+.tablero3enraya{
+    font-family: 'Caveat', cursive;
+
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding:0 22.5vw;
+}
+.tablero3enraya div{
+
+    font-size: 10rem;
+    width:15vw;
+    height: 25vh;
+    border:1px solid blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+@media screen and (width<500px){
+    .tablero3enraya{
+        padding:5vw ;
+    }
+    .tablero3enraya div{
+        width:30vw;
+        height: 20vh;
+    
+    }
+}

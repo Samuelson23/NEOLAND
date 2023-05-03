@@ -1,4 +1,7 @@
 import { printFooter } from "../components/Footer/Footer";
+import { changeLogin } from "../components/Header/Header";
+//import { changeLogin, printHeader } from "../components/Header/Header";
+
 import { printLogin } from "../pages/Login/Login";
 import { printDashboard } from "../pages/dashboard/dashboard";
 import { printHangman } from "../pages/hangman/hangman";
@@ -34,9 +37,11 @@ export const initController = (route) => {
     case "Dashboard":
       printDashboard();
       printFooter();
+      changeLogin();
       break;
     case "Login":
       printLogin();
+      changeLogin();
       break;
   }
 };

@@ -12,12 +12,13 @@
 
 #mainGames h3{
     font-size: 2rem;
-    color:#08224c;
+    color:var(--primaryColor);
 }
 #gameSection{
-    width:35vw;
-    height: 45vh;
+    width:20vw;
+    height: 35vh;
     gap:0.5rem;
+    padding: 10px 0;
     display:flex;
     flex-direction: column;
     justify-content: space-between;
