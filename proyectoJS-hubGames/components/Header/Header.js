@@ -1,3 +1,4 @@
+import { printAbout } from "../../pages/About/About";
 import { printGames } from "../../pages/Games/Games";
 import { initController } from "../../utils/route";
 import "./Header.css";
@@ -54,7 +55,7 @@ const headerListeners = () => {
   });
   const linkAbout = document.querySelector(".linkAbout");
   linkAbout.addEventListener("click", (ev) => {
-    !localStorage.getItem("user") ? initController("Login") : printGames();
+    !localStorage.getItem("user") ? initController("Login") : printAbout();
   });
   const linkLogin = document.querySelector(".linkLogin");
   linkLogin.addEventListener("click", (ev) => {

@@ -1,8 +1,11 @@
+import { crearTablero } from "../../utils/utilsQuiz/crearTablero";
 import "./quizgames.css";
 
 const template = () => {
   return `
-    <p>pagina del juego quizgame</p>
+    <div class="quizGame">
+      
+    </div>
     `;
 };
 
@@ -10,5 +13,6 @@ const template = () => {
 
 export const printQuizgames = () => {
   document.querySelector("main").innerHTML = template();
+  crearTablero();
   //listeners
 };
