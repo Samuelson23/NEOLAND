@@ -1,3 +1,4 @@
+import { changeLogin } from "../../components/Header/Header";
 import { initController } from "../../utils/route";
 import "./Login.css";
 
@@ -28,6 +29,7 @@ const addListeners = () => {
   buttonLogin.addEventListener("click", (ev) => {
     const userName = inputLogin.value;
     console.log(userName);
+    changeLogin("Login");
     localStorage.setItem("user", userName);
     initController("undefined");
     return userName;

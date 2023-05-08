@@ -58,12 +58,13 @@ const headerListeners = () => {
   });
   const linkLogin = document.querySelector(".linkLogin");
   linkLogin.addEventListener("click", (ev) => {
-    //changeLogin();
-    initController("Login");
+    changeLogin("Login");
+    initController("Dashboard");
   });
   const linkLogout = document.querySelector(".linkLogout");
   linkLogout.addEventListener("click", (ev) => {
     localStorage.removeItem("user");
+    changeLogin("Logout");
     initController("Login");
   });
   const temaOscuro = document.querySelector(".claroOscuro");
@@ -72,14 +73,20 @@ const headerListeners = () => {
   });
 };
 
-export const changeLogin = () => {
+export const changeLogin = (authentication) => {
   const login = document.querySelector(".linkLogin");
   const logout = document.querySelector(".linkLogout");
 
-  if (localStorage.getItem("user")) {
-    console.log("localstorage", localStorage.getItem("user"));
-    logout.style.display = "flex";
-    login.style.display = "none";
+  switch (authentication) {
+    case "Login":
+      logout.style.display = "flex";
+      login.style.display = "none";
+      break;
+
+    case "Logout":
+      login.style.display = "flex";
+      logout.style.display = "none";
+      break;
   }
 };
 

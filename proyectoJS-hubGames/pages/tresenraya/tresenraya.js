@@ -7,7 +7,7 @@ let userCount = 0;
 
 const template = () => {
   return `
-  <h2>${nameUser.toUpperCase()}: ${userCount}</h2>
+  <h2>${nameUser}: ${userCount}</h2>
   <h2>MAQUINA: </h2>
     <div class="tablero3enraya">
       <div id="casilla" class="a1"></div>

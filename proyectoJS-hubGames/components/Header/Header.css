@@ -34,12 +34,11 @@ li img{
     width: 40px;
     height: 40px;
 }
-.iconLogout{
-    display:none;
-}
+
 .imgLogo{
-    height: 10vh;
-    width: 10vw;
+    height: 90px;
+    width: 90px;
+    object-fit: contain;
 
     padding:10px;
 }
@@ -57,8 +56,8 @@ header img{
 .claroOscuro{
     font-family: 'Sigmar', cursive;
     font-size: 1rem;
-    height: 80%;
-    width: 80px;
+    height: 50px;
+    width: 50px;
     background-color: var(--secondaryColor);
     color:var(--primaryColor);
     border-radius: 50%;

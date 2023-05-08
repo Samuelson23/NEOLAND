@@ -27,6 +27,9 @@ main{
     align-items: center;
 }
 
+p{
+    font-size:18px;
+}
 
 li{
     list-style: none;
@@ -49,7 +52,12 @@ a{
     color:var(--primaryColorDark);
     text-shadow: var(--secondaryColorDark) 10px 5px 3px;
 }
-
+.darkMode .galleryPokemon{
+    color:var(--primaryColor)
+}
+.darkMode .galleryPokemon h2{
+    color:var(--primaryColor)
+}
 main h1{
     font-size: 3rem;
     text-shadow: #89d2df 10px 5px 3px;

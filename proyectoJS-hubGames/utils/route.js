@@ -10,6 +10,7 @@ import { printPokemon } from "../pages/pokemon/pokemon";
 import { printQuizgames } from "../pages/quizgames/quizgames";
 import { printTresenraya } from "../pages/tresenraya/tresenraya";
 import { printWhakatopo } from "../pages/whakatopo/whakatopo";
+import { axiosPokemon } from "./axiosRequest";
 
 export const initController = (route) => {
   switch (route) {
@@ -36,12 +37,11 @@ export const initController = (route) => {
       break;
     case "Dashboard":
       printDashboard();
-      printFooter();
-      changeLogin();
+
       break;
     case "Login":
       printLogin();
-      changeLogin();
+
       break;
   }
 };

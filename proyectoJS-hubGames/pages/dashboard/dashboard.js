@@ -113,7 +113,7 @@ const template = () => {
 
 //listeners
 
-export const printDashboard = () => {
+export const printDashboard = async () => {
   document.querySelector("main").innerHTML = template();
   //listeners
 };
