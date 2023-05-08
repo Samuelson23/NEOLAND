@@ -9,16 +9,16 @@ import { initGame } from "./initGame";
 export const initCategoria = (indice) => {
   switch (indice) {
     case 0:
-      initGame(preguntasTecnologia, indice);
+      initGame(preguntasTecnologia, 0);
       break;
     case 1:
-      initGame(preguntasDeporte, indice);
+      initGame(preguntasDeporte, 0);
       break;
     case 2:
-      initGame(preguntasEconomia, indice);
+      initGame(preguntasEconomia, 0);
       break;
     case 3:
-      initGame(preguntasGeografia, indice);
+      initGame(preguntasGeografia, 0);
       break;
   }
 };
