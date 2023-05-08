@@ -137,7 +137,7 @@ export const preguntasGeografia = [
       "Cordillera sudafricana",
       "Volcán Ijguanakumpú",
     ],
-    acierto: "",
+    acierto: "Kilimanjaro",
   },
   {
     pregunta: "¿En qué año finalizó la independencia de Cuba?",
