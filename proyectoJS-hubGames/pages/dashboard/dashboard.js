@@ -1,9 +1,9 @@
 import "./dashboard.css";
-
+const user = localStorage.getItem("user").toUpperCase();
 const template = () => {
   return `
     <div class="textoDash">
-      <h1>BIENVENIDO/A A GAMESHUB</h1>
+      <h1>BIENVENIDO/A A GAMESHUB ${user}</h1>
       <h2>
         Disfruta recordando míticos juegos que no pasan de moda, pero esta en
         vez, en formato digital. Tambien tienes una pequeña Pokédex si eres fan
