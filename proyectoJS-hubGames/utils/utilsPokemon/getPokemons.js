@@ -1,8 +1,6 @@
 import { mapeoPokemon } from "./mapeoPokemons";
-import { printCard } from "./printCards";
+import { printCard } from "../../components/pokemon/printCards";
 
 export const getPokemons = async () => {
-  let arrayTodos = await mapeoPokemon();
-  printCard(arrayTodos);
-  console.log(arrayTodos);
+  return await mapeoPokemon();
 };

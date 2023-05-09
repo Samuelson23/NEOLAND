@@ -5,6 +5,7 @@ import { printTresenraya } from "../tresenraya/tresenraya";
 import { printWhakatopo } from "../whakatopo/whakatopo";
 import "./Games.css";
 import { printPokemon } from "../pokemon/pokemon";
+import { initController } from "../../utils/route";
 
 const template = () => {
   return `
@@ -58,22 +59,22 @@ const template = () => {
 //listeners
 const listenersGames = () => {
   document.querySelector(".linkPokemon").addEventListener("click", (ev) => {
-    printPokemon();
+    initController("Pokemon");
   });
   document.querySelector(".linkHangman").addEventListener("click", (ev) => {
-    printHangman();
+    initController("Hangman");
   });
   document.querySelector(".linkMemorycard").addEventListener("click", (ev) => {
-    printMemorycard();
+    initController("MemoryCard");
   });
   document.querySelector(".linkQuizgames").addEventListener("click", (ev) => {
-    printQuizgames();
+    initController("Quizgames");
   });
   document.querySelector(".linkWhakatopo").addEventListener("click", (ev) => {
-    printWhakatopo();
+    initController("Whakatopo");
   });
   document.querySelector(".linkTresenraya").addEventListener("click", (ev) => {
-    printTresenraya();
+    initController("Tresenraya");
   });
 };
 

@@ -1,6 +1,5 @@
-import { getButtons } from "../../utils/utilsPokemon/getBotones";
-import { getPokemons } from "../../utils/utilsPokemon/getPokemons";
-
+import { getButtons } from "../../components/pokemon/getBotones";
+import { printCard } from "../../components/pokemon/printCards";
 import "./pokemon.css";
 
 const template = () => ` 
@@ -29,8 +28,9 @@ const addListeners = () => {};
 
 // ----> 3) Pintar */
 
-export const printPokemon = () => {
+export const printPokemon = (data) => {
+  const { pokemon, type } = data;
   document.querySelector("main").innerHTML = template();
-  getPokemons();
-  getButtons();
+  getButtons(pokemon, type);
+  printCard(pokemon);
 };

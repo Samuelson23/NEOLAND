@@ -1,5 +1,3 @@
-import { printFooter } from "../components/Footer/Footer";
-import { changeLogin } from "../components/Header/Header";
 //import { changeLogin, printHeader } from "../components/Header/Header";
 
 import { printLogin } from "../pages/Login/Login";
@@ -10,15 +8,17 @@ import { printPokemon } from "../pages/pokemon/pokemon";
 import { printQuizgames } from "../pages/quizgames/quizgames";
 import { printTresenraya } from "../pages/tresenraya/tresenraya";
 import { printWhakatopo } from "../pages/whakatopo/whakatopo";
-import { axiosPokemon } from "./axiosRequest";
+import { dataGlobal } from "./utilsPokemon/dataGlobal";
 
-export const initController = (route) => {
+export const initController = async (route) => {
+  const dataGlobalPok = await dataGlobal();
+  const { dataPokemon } = dataGlobalPok;
   switch (route) {
     case "undefined":
       localStorage.getItem("user") ? printDashboard() : printLogin();
       break;
     case "Pokemon":
-      printPokemon();
+      printPokemon(dataPokemon);
       break;
     case "Hangman":
       printHangman();

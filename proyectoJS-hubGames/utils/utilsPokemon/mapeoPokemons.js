@@ -14,21 +14,21 @@ export const mapeoPokemon = async () => {
   const arrayPok = await pokemonLimpio();
   let dataPokemons = arrayPok.map((elem) => {
     let idCompleto = "";
-    if (elem.data.id < 10) {
-      idCompleto = `00${elem.data.id}`;
-    } else if (elem.data.id < 100) {
-      idCompleto = `0${elem.data.id}`;
+    if (elem.id < 10) {
+      idCompleto = `00${elem.id}`;
+    } else if (elem.id < 100) {
+      idCompleto = `0${elem.id}`;
     } else {
-      idCompleto = `${elem.data.id}`;
+      idCompleto = `${elem.id}`;
     }
     return {
       id: idCompleto,
-      name: elem.data.name,
-      img: elem.data.sprites.other.dream_world.front_default,
-      types: elem.data.types, //[0].type.name,
-      //type2: elem.data.types[1].type.name,
-      altura: elem.data.height * 10,
-      peso: elem.data.weight / 10,
+      name: elem.name,
+      img: elem.sprites.other.dream_world.front_default,
+      types: elem.types, //[0].type.name,
+      //type2: elem.types[1].type.name,
+      altura: elem.height * 10,
+      peso: elem.weight / 10,
     };
   });
   return dataPokemons;
