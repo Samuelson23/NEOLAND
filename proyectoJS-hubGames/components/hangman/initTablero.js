@@ -1,13 +1,13 @@
 import { comprobarLetra } from "../../utils/utilsHangman/comprobarLetra";
 import { comprobarWin } from "../../utils/utilsHangman/comprobarWin";
 import { arrayAhorcado, arrayPalabras } from "./arrayAhorcado";
-let fallos = 1;
+let fallos = 0;
 
 export const initTablero = () => {
   let indexRandom = randomWord(arrayPalabras);
   let palabra = arrayPalabras[indexRandom];
   palabra.toLowerCase();
-  //palabra.split("");
+
   let palabraOculta = [];
   console.log(palabra);
   const divAhorcado = document.querySelector(".ahorcado");
@@ -55,14 +55,11 @@ const listenersBusqueda = (palabra, fallos, palabraOculta) => {
   const input = document.querySelector("input");
 
   btBusqueda.addEventListener("click", (ev) => {
-    if (!palabra.includes(input.value.toLowerCase())) {
-      comprobarWin(palabra, fallos, palabraOculta);
+    if (!palabra.toLowerCase().includes(input.value.toLowerCase())) {
       fallos++;
+      comprobarWin(palabra, fallos, palabraOculta);
     } else {
       comprobarWin(palabra, fallos, palabraOculta);
     }
-
-    /* console.log("input", input.value);
-    console.log(fallos); */
   });
 };

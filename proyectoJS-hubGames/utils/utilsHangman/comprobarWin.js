@@ -19,7 +19,7 @@ export const comprobarWin = (palabra, fallos, palabraOculta) => {
       boton.addEventListener("click", (ev) => {
         initTablero();
       });
-    }, 1000);
+    }, 200);
   } else if (fallos <= 6) {
     comprobarLetra(palabra, fallos, palabraOculta);
   } else {
@@ -30,6 +30,6 @@ export const comprobarWin = (palabra, fallos, palabraOculta) => {
       boton.addEventListener("click", (ev) => {
         initTablero();
       });
-    }, 1000);
+    }, 200);
   }
 };

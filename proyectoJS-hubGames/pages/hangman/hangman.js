@@ -13,7 +13,6 @@ const template = () => {
     `;
 };
 
-//listeners
 const listenersPlay = () => {
   const btPlay = document.querySelector(".playHangman");
   btPlay.addEventListener("click", (ev) => {
@@ -24,5 +23,4 @@ const listenersPlay = () => {
 export const printHangman = () => {
   document.querySelector("main").innerHTML = template();
   listenersPlay();
-  //listeners
 };
