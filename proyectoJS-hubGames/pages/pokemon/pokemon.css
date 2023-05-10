@@ -1,7 +1,7 @@
 .divBusqueda{
     height: 20vh;
     width: 100vw;
-    border: 2px solid red;
+    
     display:flex;
     flex-direction: row;
     align-items: center;
@@ -9,12 +9,14 @@
 }
 .divBusqueda input{
     height: 35px;
+    width:15vw;
     border-radius: 10px;
 }
 .botonesPok{
     width: 60vw;
     display:flex; 
     flex-wrap: wrap;
+    justify-content: center;
     gap:15px;
 }
 .botonesPok button{
@@ -196,5 +198,71 @@
     background-color:rgb(100, 0, 255);
     .datosPokemon{
         background-color:rgb(100, 0, 255);
+    }
+}
+
+@media screen and (width<800px){
+    .divBusqueda input{
+        height: 35px;
+        width:45vw;
+        border-radius: 10px;
+    }
+    .botonesPok{
+        width: 100vw;
+        display:flex; 
+        flex-wrap: wrap;
+        gap:10px;
+    }
+    .divBusqueda{
+        height: 20vh;
+        width: 100vw;
+        border: 2px solid red;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (width<500px){
+    .botonesPok{
+        gap:10px;
+    }
+    .divBusqueda input{
+        height: 35px;
+        width:45vw;
+        border-radius: 10px;
+    }
+    .botonesPok button{
+        width: 60px;
+        height: 20px;
+        border-radius: 20px;
+
+    }
+    .galleryPokemon figure{
+        height: 200px;
+        width: 100px;
+    }
+    .galleryPokemon img{
+        height: 75px;
+        width: 75px;
+    }
+    .pokemonCard figure div{
+        justify-content: center;
+    }
+    .pokemonCard figure div h3{
+        display:none;
+    }
+    .pokemonCard figure div h2{
+        font-size: 0.7rem;
+    }
+    .datosPokemon{
+        height: 40%;
+    }
+    .datosPokemon p{
+        font-size:12px;
+    }
+    .datosPokemon h4{
+        display:none;
     }
 }

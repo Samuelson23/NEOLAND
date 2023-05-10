@@ -1,3 +1,5 @@
+import { printTresenraya } from "../../pages/tresenraya/tresenraya";
+
 function getRandom(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -22,7 +24,10 @@ export const pintaMaq = () => {
       casDisp.push(casilla);
     }
   }
-  casDisp.length == 0 && alert("TABLAS");
+  if (casDisp.length == 0) {
+    alert("TABLAS");
+    printTresenraya();
+  }
   const numRandom = getRandom(0, casDisp.length - 1);
   console.log(numRandom);
   casDisp[numRandom].innerText = "O";

@@ -43,7 +43,7 @@
 
 @media screen and (width<650px){
     #gameSection{
-        width:60%;
+        width:40%;
         height: 35vh;
     }
 }

@@ -68,11 +68,16 @@ header img{
     header h1{
         display:none;
     }
-
 }
 
 @media screen and (width<650px){
     .imgLogo{
         display:none;
+    }
+    header ul{
+        width: 70vw;
+    }
+    header ul a li p{
+        font-size: 12px;
     }
 }

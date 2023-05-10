@@ -24,6 +24,7 @@
 }
 .ahorcado h2{
     font-size: 3rem;
+    text-shadow: none;
 }
 .ahorcado h3{
     font-size: 1.8rem;
@@ -54,8 +55,7 @@
 .palabraOculta{
     display:flex;
     flex-direction:row;
-    gap:2rem;
-    
+    gap:2rem;  
 }
 input{
     height: 2rem;
@@ -65,4 +65,34 @@ input{
 .btBuscar{
     height: 2rem;
     width: 8rem;
+}
+
+@media screen and (width<850px){
+    .palabraOculta{
+        gap:1rem;  
+    }
+}
+
+@media screen and (width<700px){
+    .ahorcado img{
+        height: 200px;
+        width: 200px;
+    }
+}
+@media screen and (width<500px){
+    .ahorcado h2{
+        font-size: 2rem;
+    }
+    .palabraOculta{
+        gap:0.3rem;
+        font-size: 12px;
+    }
+    .busqueda{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap:40px;
+    }
+
 }

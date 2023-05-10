@@ -44,36 +44,42 @@ const template = () => {
     `;
 };
 
+//añadimos eventListeners para que cuando clickemos en algun icono del header nos dirija a esa sección
 const headerListeners = () => {
   const linkHome = document.querySelector(".linkHome");
   linkHome.addEventListener("click", (ev) => {
-    initController("undefined");
+    initController("Dashboard");
   });
   const linkGames = document.querySelector(".linkGames");
   linkGames.addEventListener("click", (ev) => {
-    !localStorage.getItem("user") ? initController("Login") : printGames();
+    !localStorage.getItem("user") ? initController("Login") : printGames(); //-----> si el usuario no esta logeado no puede entrar a esta seccion
   });
   const linkAbout = document.querySelector(".linkAbout");
   linkAbout.addEventListener("click", (ev) => {
-    !localStorage.getItem("user") ? initController("Login") : printAbout();
+    !localStorage.getItem("user") ? initController("Login") : printAbout(); //-----> si el usuario no esta logeado no puede entrar a esta seccion
   });
   const linkLogin = document.querySelector(".linkLogin");
   linkLogin.addEventListener("click", (ev) => {
-    changeLogin("Login");
-    initController("Dashboard");
+    //changeLogin("Login");
+    initController();
   });
+
+  //una vez el usuario se logee cambiamos al icono "Logout" y cuando clickemos en él nos borra el user y nos redirige a la pagina del login again
   const linkLogout = document.querySelector(".linkLogout");
   linkLogout.addEventListener("click", (ev) => {
     localStorage.removeItem("user");
     changeLogin("Logout");
     initController("Login");
   });
+
+  //creamos un modo oscuro mediante un toggle de la clase del css
   const temaOscuro = document.querySelector(".claroOscuro");
   temaOscuro.addEventListener("click", (ev) => {
     document.querySelector("main").classList.toggle("darkMode");
   });
 };
 
+//funcion para cambiar el login por el logout si el usuario está registrado
 export const changeLogin = (authentication) => {
   const login = document.querySelector(".linkLogin");
   const logout = document.querySelector(".linkLogout");
