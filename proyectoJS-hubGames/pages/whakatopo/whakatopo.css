@@ -1,6 +1,8 @@
 .interface {
+
     display: flex;
     flex-direction: column;
+    flex-wrap:wrap;
     place-items: center;
     gap: 24px;
 }
@@ -12,8 +14,8 @@
     background-color: var(--secondaryColor);
 }
 .game {
-    width: 600px;
-    height: 400px;
+    width: 60vw;
+    min-height: 60vh;
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
@@ -60,4 +62,5 @@
 .hole.up .mole{
     top: 0;
 }
+
 

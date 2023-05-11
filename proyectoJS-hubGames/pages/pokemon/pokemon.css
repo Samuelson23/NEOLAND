@@ -200,6 +200,20 @@
         background-color:rgb(100, 0, 255);
     }
 }
+.steel{
+    border:10px solid rgb(175, 138, 255);
+    background-color:rgb(175, 138, 255);
+    .datosPokemon{
+        background-color:rgb(175, 138, 255);
+    }
+}
+.flying{
+    border:10px solid rgb(245, 245, 245);
+    background-color:rgb(245, 245, 245);
+    .datosPokemon{
+        background-color:rgb(245, 245, 245);
+    }
+}
 
 @media screen and (width<800px){
     .divBusqueda input{

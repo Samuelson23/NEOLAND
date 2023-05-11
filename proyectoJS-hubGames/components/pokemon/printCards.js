@@ -1,3 +1,4 @@
+//funcion para pintar las cartas. Como le pasamos un array mapeado con los datos que queremos acortamos la ruta de acceso a dichos elementos.
 export const printCard = (array) => {
   const divGaleria = document.querySelector(".galleryPokemon");
   divGaleria.innerHTML = "";

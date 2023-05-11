@@ -26,6 +26,9 @@
     font-size: 3rem;
     text-shadow: none;
 }
+.darkMode h2{
+    text-shadow: none;
+}
 .ahorcado h3{
     font-size: 1.8rem;
     text-align: center;
@@ -50,7 +53,7 @@
     align-items: center;
     height: 70vh;
     width: 50vw;
-    
+    color:var(--primaryColor)
 }
 .palabraOculta{
     display:flex;

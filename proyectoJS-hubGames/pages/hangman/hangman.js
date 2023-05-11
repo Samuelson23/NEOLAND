@@ -5,7 +5,7 @@ const template = () => {
   return `
     <div class="ahorcado">
       
-      <h2>Bienvenido al Hangman!</h2>
+      <h3>Bienvenido al Hangman!</h3>
       <h3>Intenta adivinar todas las palabras</h3>
       <button class="playHangman">Jugar</button>
       

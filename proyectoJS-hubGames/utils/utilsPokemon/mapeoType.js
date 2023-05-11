@@ -1,6 +1,7 @@
 import { pokemonLimpio } from "./dataPokemon";
 import { mapeoPokemon } from "./mapeoPokemons";
 
+//mapeamos los tipos para guardarlos en un array con los tipos unicos
 export const mapeoTipos = async () => {
   const arrayTipos = [];
   const arrayPokemon = await mapeoPokemon();

@@ -17,10 +17,28 @@ export const getButtons = async (pokemons, types) => {
     //----- FILTRAMOS Y PINTAMOS LOS POKEMONS SEGUN EL BOTON DE TIPO QUE CLICKEMOS
     button.addEventListener("click", (ev) => {
       console.log(ev.target.className);
+
       const arrayFiltrado = [];
-      pokemons.forEach((elem) => {
+      //---> SOLO COMPRUEBA EL PRIMER TIPO
+      /* pokemons.forEach((elem) => {
+        console.log(elem.types);
         if (elem.types[0].type.name == ev.target.className) {
           arrayFiltrado.push(elem);
+        }
+      }); */
+
+      //---> SI EL POKEMON ES DE 2 TIPOS BUSCAMOS EN LOS 2 TIPOS A VER SI COINCIDE CON EL BOTON
+      pokemons.forEach((elem) => {
+        if (elem.types.length == 2) {
+          if (elem.types[1].type.name == ev.target.className) {
+            arrayFiltrado.push(elem);
+          } else if (elem.types[0].type.name == ev.target.className) {
+            arrayFiltrado.push(elem);
+          }
+        } else {
+          if (elem.types[0].type.name == ev.target.className) {
+            arrayFiltrado.push(elem);
+          }
         }
       });
       printCard(arrayFiltrado);

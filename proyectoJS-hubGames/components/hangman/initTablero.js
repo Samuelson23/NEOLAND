@@ -15,7 +15,7 @@ export const initTablero = () => {
     <div class="tablero">
       <img class="imgAhorcado" src="${arrayAhorcado[0]}" alt="" />
 
-        <div class="palabra"><h2>Adivina la palabra</h2>
+        <div class="palabra"><h3>Adivina la palabra</h3>
             <div class="palabraOculta"></div>
             <div class="busqueda">
                 <input type="text" placeholder="letra"></input>
