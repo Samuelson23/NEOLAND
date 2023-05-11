@@ -97,5 +97,12 @@ input{
         justify-content: center;
         gap:40px;
     }
-
+    .tablero{
+        flex-direction: column;
+    }
+    .palabra{
+        height: 40vh;
+        justify-content: center;
+        gap:20px;
+    }
 }

@@ -45,15 +45,18 @@ const template = () => {
           alt="imagen tres en raya"
         />
       </section>
-      <section id="gameSection" class="linkMemorycard">
+      
+    </div>
+  `;
+  /* 
+  <section id="gameSection" class="linkMemorycard">
         <h3>Match the Cards!</h3>
         <img
           src="https://res.cloudinary.com/dy25vd1yu/image/upload/v1683034645/ProyectoJS-hubGames/kisspng-material-yellow-orange-referee-cards-5ab0c13f260580.8581438515215332471558_cw24fl.png"
           alt="imagen memoriza las cartas"
         />
       </section>
-    </div>
-  `;
+  */
 };
 
 //listeners
@@ -64,9 +67,9 @@ const listenersGames = () => {
   document.querySelector(".linkHangman").addEventListener("click", (ev) => {
     initController("Hangman");
   });
-  document.querySelector(".linkMemorycard").addEventListener("click", (ev) => {
+  /*   document.querySelector(".linkMemorycard").addEventListener("click", (ev) => {
     initController("MemoryCard");
-  });
+  }); */
   document.querySelector(".linkQuizgames").addEventListener("click", (ev) => {
     initController("Quizgames");
   });
