@@ -36,7 +36,7 @@ export const initController = async (route) => {
       printWhakatopo();
       break;
     case "Dashboard":
-      printDashboard(dataGlobalPok); //--->nuevamente cuando vayamos a dashboard le seguiremos enviando la data de la pokeapi
+      printDashboard(); //--->nuevamente cuando vayamos a dashboard le seguiremos enviando la data de la pokeapi
 
       break;
     case "Login":
