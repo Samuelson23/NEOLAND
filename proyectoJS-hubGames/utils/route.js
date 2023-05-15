@@ -10,15 +10,13 @@ import { printWhakatopo } from "../pages/whakatopo/whakatopo";
 import { dataGlobal } from "./utilsPokemon/dataGlobal";
 
 //2º creamos un initController para controlar a que pagina nos dirigimos y que nos la pinte
-export const initController = async (route) => {
-  const dataGlobalPok = await dataGlobal(); //--->cargamos los datos asyncronos de la pokeapi en este paso (previo a la llamada a printPokemon)
-  const { dataPokemon } = dataGlobalPok;
+export const initController = (route) => {
   switch (route) {
     case "undefined":
       localStorage.getItem("user") ? printDashboard() : printLogin();
       break;
     case "Pokemon":
-      printPokemon(dataPokemon); //--->cuando vayamos a la pagina de pokemon los datos ya los tenemos precargardos
+      printPokemon(); //--->cuando vayamos a la pagina de pokemon los datos ya los tenemos precargardos
       break;
     case "Hangman":
       printHangman();

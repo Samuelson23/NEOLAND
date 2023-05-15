@@ -6,5 +6,6 @@ export const pokemonLimpio = async () => {
   for (let i = 1; i < 151; i++) {
     todosPokemons.push(await getPokemon(i));
   }
+
   return todosPokemons;
 };

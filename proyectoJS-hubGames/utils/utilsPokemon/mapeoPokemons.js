@@ -6,8 +6,11 @@ import { pokemonLimpio } from "./dataPokemon";
 };*/
 
 //mapeamos todos los pokemon para quedarnos con los 5 datos que nos interesan
+export let todosPokemon = [];
+
 export const mapeoPokemon = async () => {
   const arrayPok = await pokemonLimpio();
+  todosPokemon = arrayPok;
   let dataPokemons = arrayPok.map((elem) => {
     let idCompleto = "";
     if (elem.id < 10) {
