@@ -9,6 +9,7 @@ export const getButtons = async (pokemons, types) => {
   const divPokemon = document.querySelector(".botonesPok");
   const input = document.querySelector("input");
   types.forEach((elem) => {
+    console.log(elem);
     const button = document.createElement("button");
     button.innerText = elem;
     button.classList.add(elem);

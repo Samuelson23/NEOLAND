@@ -1,5 +1,8 @@
 import { getButtons } from "../../components/pokemon/getBotones";
 import { printCard } from "../../components/pokemon/printCards";
+//import { dataGlobal } from "../../utils/utilsPokemon/dataGlobal";
+import { todosPokemon } from "../../utils/utilsPokemon/mapeoPokemons";
+import { arrayTipos } from "../../utils/utilsPokemon/mapeoType";
 import "./pokemon.css";
 
 const template = () => ` 
@@ -28,9 +31,12 @@ const addListeners = () => {};
 
 // ----> 3) Pintar */
 
-export const printPokemon = (data) => {
-  const { pokemon, type } = data;
+export const printPokemon = async () => {
+  /* const { dataPokemon } = await dataGlobal();
+  console.log(dataPokemon);
+  const { pokemon, type } = dataPokemon;
+  console.log("1", pokemon); */
   document.querySelector("main").innerHTML = template();
-  getButtons(pokemon, type);
-  printCard(pokemon);
+  getButtons(todosPokemon, arrayTipos);
+  printCard(todosPokemon);
 };

@@ -10,7 +10,7 @@ export let todosPokemon = [];
 
 export const mapeoPokemon = async () => {
   const arrayPok = await pokemonLimpio();
-  todosPokemon = arrayPok;
+
   let dataPokemons = arrayPok.map((elem) => {
     let idCompleto = "";
     if (elem.id < 10) {
@@ -30,5 +30,7 @@ export const mapeoPokemon = async () => {
       peso: elem.weight / 10,
     };
   });
-  return dataPokemons;
+  todosPokemon = dataPokemons;
+  console.log("array", todosPokemon);
+  return todosPokemon;
 };

@@ -8,15 +8,17 @@ import { printQuizgames } from "../pages/quizgames/quizgames";
 import { printTresenraya } from "../pages/tresenraya/tresenraya";
 import { printWhakatopo } from "../pages/whakatopo/whakatopo";
 import { dataGlobal } from "./utilsPokemon/dataGlobal";
+import { todosPokemon } from "./utilsPokemon/mapeoPokemons";
 
 //2º creamos un initController para controlar a que pagina nos dirigimos y que nos la pinte
-export const initController = (route) => {
+export const initController = async (route) => {
+  console.log(await dataGlobal());
   switch (route) {
     case "undefined":
       localStorage.getItem("user") ? printDashboard() : printLogin();
       break;
     case "Pokemon":
-      printPokemon(); //--->cuando vayamos a la pagina de pokemon los datos ya los tenemos precargardos
+      printPokemon(await dataGlobal); //--->cuando vayamos a la pagina de pokemon los datos ya los tenemos precargardos
       break;
     case "Hangman":
       printHangman();

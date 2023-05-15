@@ -1,5 +1,5 @@
-import { mapeoPokemon } from "./mapeoPokemons";
-import { mapeoTipos } from "./mapeoType";
+import { mapeoPokemon, todosPokemon } from "./mapeoPokemons";
+import { arrayTipos, mapeoTipos } from "./mapeoType";
 
 //Obtenemos los datos mapeados y los guardamos en un objeto un unico, con las claves de pokemon y tipo
 

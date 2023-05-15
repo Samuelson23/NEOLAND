@@ -1,9 +1,9 @@
 import { pokemonLimpio } from "./dataPokemon";
 import { mapeoPokemon, todosPokemon } from "./mapeoPokemons";
 
+export let arrayTipos = [];
 //mapeamos los tipos para guardarlos en un array con los tipos unicos
-export const mapeoTipos = async () => {
-  const arrayTipos = [];
+export const mapeoTipos = () => {
   const arrayPokemon = todosPokemon;
 
   arrayPokemon.filter((elem) => {
@@ -11,5 +11,6 @@ export const mapeoTipos = async () => {
       !arrayTipos.includes(type.type.name) && arrayTipos.push(type.type.name);
     });
   });
-  return arrayTipos;
+  console.log("array2", arrayTipos);
+  return arrayPokemon;
 };
