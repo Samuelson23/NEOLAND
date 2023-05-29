@@ -1,0 +1,29 @@
+*{
+    margin:0;
+    padding:0;
+    box-shadow: border-box;
+}
+
+body{
+    margin:2rem;
+}
+
+#root{
+    padding:2rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    padding:1rem;
+}
+h2{
+    padding:1rem;
+}
+p{
+    padding:1rem;
+}
+img{
+    padding:1rem;
+}
