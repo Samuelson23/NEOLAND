@@ -1,0 +1,31 @@
+.cardCharacter{
+    text-align: center;
+    width: 300px;
+    height: 400px;
+    border:5px solid rgb(0, 225, 255);
+    background-color: rgb(50, 50, 50);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color:greenyellow
+}
+.cardCharacter img{
+    margin:5px;
+    width:70%;
+    height: 60%;
+    object-fit: cover;
+    border:2px solid rgb(0,255,255)
+}
+.alive{
+    margin-bottom: 5px;
+    color:greenyellow
+}
+.noAlive{
+    border:2px solid red;
+    color:red;
+}
+.cardCharacter h3{
+    text-transform: uppercase;
+    color:greenyellow   
+}

@@ -1,0 +1,17 @@
+footer{
+    height: 10vh;
+    width: 100vw;
+    border-top: 2px solid #00ddff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    -webkit-box-shadow: 5px -5px 5px 0px greenyellow;
+    -moz-box-shadow: 5px -5px 5px 0px greenyellow;
+    box-shadow: 5px -5px 5px 0px greenyellow;
+}
+.h2Footer{   
+    letter-spacing: 5px;
+    color: #00ddff;
+    text-shadow: 2px 1px greenyellow;
+}

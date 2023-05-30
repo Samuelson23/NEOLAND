@@ -1,0 +1,18 @@
+main{
+    margin: 2rem 0;
+}
+main{
+    display:flex;
+    width: 100vw;
+}
+main ul li{
+    list-style: none;
+}
+main ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    
+}

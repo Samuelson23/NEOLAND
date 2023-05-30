@@ -1,0 +1,20 @@
+header{
+    border-bottom:5px solid greenyellow;
+    height: 20vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    -webkit-box-shadow: 5px 10px 5px 0px rgba(0,255,247,1);
+    -moz-box-shadow: 5px 10px 5px 0px rgba(0,255,247,1);
+    box-shadow: 5px 10px 5px 0px rgba(0,255,247,1);
+}
+
+.h1Header{
+    font-size: 80px;
+    letter-spacing: 15px;
+    color: #00ddff;
+    text-shadow: 3px 3px greenyellow;
+}
