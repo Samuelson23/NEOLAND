@@ -1,0 +1,19 @@
+header{
+    height: 20vh;
+    width: 100vw;
+    border-bottom: 5px solid crimson;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.navHeader{
+    display:flex;
+    list-style: none;
+    gap:5rem;
+    
+}
+.navHeader li{
+    border:2px solid red;
+    gap: 20px;
+}
