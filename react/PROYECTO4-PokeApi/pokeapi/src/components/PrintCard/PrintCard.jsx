@@ -11,11 +11,11 @@ const PrintCard = (data) => {
         </div>
         <img src={image} alt={name}/>
         <div className='infoPoke'>
-            <p>{type}</p>
+            <p>Tipo: {type}</p>
             <p>{abilities}</p>
-            <p>{hp}</p>
-            <p>{attack}</p>
-            <p>{defense}</p>
+            <p>HP: {hp}</p>
+            <p>Ataque: {attack}</p>
+            <p>Defensa: {defense}</p>
         </div>
         
     </div>

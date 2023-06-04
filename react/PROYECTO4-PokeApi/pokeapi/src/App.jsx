@@ -45,12 +45,14 @@ function App() {
       <h1>Pokédex</h1>
       <input type="text" name="" id="" onChange={(event)=>{
         setName(event.target.value)
+        setPokemonChosen(false)
       }}/>
       <button onClick={()=>{{(name ? (searchPokemon(name.toLowerCase())) : console.log("no"))}}}>Search Pokemon</button>
     </div>
     <div className='divCard'>
       {(pokemonChosen
-        ? <PrintCard data={pokemon}/>
+        ? 
+        <PrintCard data={pokemon}/>
         : 
         <div>
         <h1>Pon un Pokemon</h1>
