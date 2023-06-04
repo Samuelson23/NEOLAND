@@ -1,0 +1,18 @@
+.divCountdown{
+    width: 100vw;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
+    background-color: rgb(160, 0, 0);;
+}
+.divCountdown h2{
+    font-size: 65px;
+    color: whitesmoke
+}
+.divCountdown h3{
+    font-size: 25px;
+    color:whitesmoke;
+}

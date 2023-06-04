@@ -1,0 +1,25 @@
+.divCronometro{
+    width: 100vw;
+    height: 30vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    padding-top: 20px;
+    background-color: rgb(126, 0, 0);
+    color: whitesmoke;
+}
+.divContador{
+    display:flex;
+    font-size: 30px;
+}
+.divContador p{
+    border:1px solid rgb(177, 177, 177);
+    padding:3px 15px;
+}
+.divBotones button{
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+}

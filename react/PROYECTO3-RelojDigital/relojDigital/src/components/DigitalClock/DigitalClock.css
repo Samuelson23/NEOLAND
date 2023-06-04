@@ -1,0 +1,14 @@
+.divDigitalClock{
+    width: 100vw;
+    height: 35vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 61, 61);
+}
+.divDigitalClock h2{
+    font-size: 80px;
+    background-color: rgb(160, 0, 0);
+    padding: 10px;
+    color:whitesmoke;
+}

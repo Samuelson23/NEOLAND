@@ -3,9 +3,9 @@ import React, { useEffect, useState } from 'react'
 
 const CountDown = () => {
     const [time, setTime] = useState("")
-
+    const fecha="Jun 25, 2024 00:00:00"  
     useEffect(()=>{
-        let countDownDate = new Date("Jun 25, 2024 00:00:00").getTime()
+        let countDownDate = new Date(fecha).getTime()
         let x= setInterval(()=>{
             let now= new Date().getTime()
             let diference = countDownDate - now
@@ -16,18 +16,19 @@ const CountDown = () => {
         
             setTime(`${days}d ${hours}h ${minutes}m ${seconds}s`)
 
-            if(distance<=0){
+            if(diference<=0){
                 clearInterval(x)
                 setTime("----> COUNTDOWN FINISHED!!! <----")
             }
         },1000)
     },[])
 
-    
-
 
   return (
-    <div className="divCountdown">{time}</div>
+    <div className="divCountdown">
+      <h3>{fecha}</h3>
+      <h2>{time}</h2>
+      </div>
   )
 }
 
