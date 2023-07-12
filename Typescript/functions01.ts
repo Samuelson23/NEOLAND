@@ -27,3 +27,29 @@ function sum(input:number[]): number {
 }
 
 console.log(sum([5,6]))
+
+/*
+TIPO DE FUNCION
+1) Declaramos un nuevo type o una interfaz (segun queramos) y lo utilizamos para firmar el tipo de la funcion
+2) Creamos unas variables a las que le pones el tipo que acabamos de crear, que en este caso son 2 parametros tipo number que devuelven un number
+3) Creamos una funcion a la que le pasamos parametros de otra funcion. -> doCalculation("parametro")(parametros de la otra funcion)
+*/
+
+type calculator = (x:number, y: number) => number
+//interface Calculator {(x:number, y:number):number}
+
+let sumaNum: calculator = (x:number, y: number): number => x+y
+let restaNum: calculator = (x:number, y:number): number=>x-y
+
+console.log(restaNum(2,3))
+
+let doCalculation = (operation:"add"|"subtract"): calculator =>{
+    if(operation==="add"){
+        return sumaNum
+    }else{
+        return restaNum
+    }
+}
+
+console.log(doCalculation("add")(2,3))
+
